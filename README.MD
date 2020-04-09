@@ -1,6 +1,6 @@
 # Neurone AM Deployment
 
-Neurone-AM (Active Monitoring) is a solution aimed at the real-time delivery, throught a persistent connection, of updated metrics to measure the performance of users when they use the NEURONE search engine. It consists of three components that interact with each others: neuron-am-connector, neuron-am-coordinator, and neuron-am-visualization.
+Neurone-AM (Active Monitoring) is a solution aimed at the real-time delivery, throught a persistent connection, of updated metrics to measure the performance of users when they use the [NEURONE](https://github.com/NEURONE-IL/neurone) search engine. It consists of three components that interact with each others: [neurone-am-connector](https://github.com/NEURONE-IL/neurone-am-connector.git), [neurone-am-coordinator](https://github.com/NEURONE-IL/neurone-am-coordinator.git), and [neurone-am-visualization](https://github.com/NEURONE-IL/neurone-am-visualization.git).
 
 This repository provides a enviroment to deploy and configure all Neurone-AM components together in A GNU/Linux Machine.
 
@@ -8,9 +8,9 @@ This repository provides a enviroment to deploy and configure all Neurone-AM com
 
 Neurone-AM is made up of three componets with differents roles. Each is briefly described below:
 
-* neurone-am-connector: This component is a API REST that provides a set of services to calculate behavioral and performance metrics for participans of NEURONE search engine. Therefore, it interact directly with NEURONE database to get the all necesary data for the process.
-* neurone-am-coordinator: Coordinator component is responsible of deliver the metrics in real time through a persistent connection to the clients or consumers of its. This handle the interaction between neruone-am-connector API and any client as neurone-am-visualization client prototype. Also, support publish-subscribe pattern.
-* neurone-am-visualization: Visualization component is a Front-end prototype client that allow to a observer visualize the behavior and performance of all users. Therefore, through this component differents metrics are displayed and actualized in a defined update interval. This component interact directly with neurone-am-coordinator through subscription and consumption of previously selected metrics.
+* [neurone-am-connector](https://github.com/NEURONE-IL/neurone-am-connector.git): This component is a API REST that provides a set of services to calculate behavioral and performance metrics for participans of NEURONE search engine. Therefore, it interact directly with NEURONE database to get the all necesary data for the process.
+* [neurone-am-coordinator](https://github.com/NEURONE-IL/neurone-am-coordinator.git): Coordinator component is responsible of deliver the metrics in real time through a persistent connection to the clients or consumers of its. This handle the interaction between neruone-am-connector API and any client as neurone-am-visualization client prototype. Also, support publish-subscribe pattern.
+* [neurone-am-visualization](https://github.com/NEURONE-IL/neurone-am-visualization.git): Visualization component is a Front-end prototype client that allow to a observer visualize the behavior and performance of all users. Therefore, through this component differents metrics are displayed and actualized in a defined update interval. This component interact directly with neurone-am-coordinator through subscription and consumption of previously selected metrics.
 
 
 
@@ -18,8 +18,8 @@ Neurone-AM is made up of three componets with differents roles. Each is briefly 
 
 First, the following requirements must be met to successfully deploy the solution:
 
-* The NEURONE Mongo Database must be initialized.
-* Docker installed.
+* The [NEURONE](https://github.com/NEURONE-IL/neurone) Mongo Database must be initialized.
+* [Docker](https://www.docker.com/) installed.
 
 Below are listed the instructtions to do the deployment:
 
@@ -66,7 +66,9 @@ neurone-am-visualization: (y/n) n #not
 
 ## Configuration
 
-To change the default settings for each component, access its folder in the configuration directory.
+To change the default settings for each component, access its folder in the configuration directory. 
+
+When the component port is changed its runDocker.sh script also must be modify with new ports.
 
 #### neurone-am-connector
 
