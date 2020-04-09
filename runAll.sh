@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+# This script is based on CITIAPS deployment script by Luis Veas (username github luisveasc )
+
 localPath=$PWD
 repositories=("neurone-am-connector" "neurone-am-coordinator" "neurone-am-visualization")
 confFiles=("src/main/resources/application.conf" ".env" ".env")

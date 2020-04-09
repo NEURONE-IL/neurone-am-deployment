@@ -59,7 +59,7 @@ neurone-am-visualization: (y/n) n #not
     - ctn_neurone_conector      (connector component).
 10. By default the component are running in the following ports:
     - visualization: 3000
-    - coordinator: 4002
+    - coordinator: 4001
     - connector: 8081
 11. To stop all docker run `./stopAll.sh`.
 
