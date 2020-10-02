@@ -24,7 +24,7 @@ RUN \
   echo "export PATH=~/scala-$SCALA_VERSION/bin:$PATH" >> /root/.bashrc
 
 # Install SBT
-RUN wget https://piccolo.link/sbt-$SBT_VERSION.tgz && \
+RUN wget https://github.com/sbt/sbt/releases/download/v$SBT_VERSION/sbt-$SBT_VERSION.tgz && \
   tar -xzvf sbt-$SBT_VERSION.tgz && \
   sbt sbtVersion
 # Define working directory
